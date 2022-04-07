@@ -1,9 +1,12 @@
+import "dotenv/config.js";
 import createError from 'http-errors'
 import express from 'express'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import logger from 'morgan'
 
+// Connect to the database with Mongoose
+import("./config/database.js");
 // import routers
 import { router as indexRouter } from './routes/index.js'
 import { router as flightsRouter } from './routes/flights.js'
@@ -30,7 +33,7 @@ app.use(
 
 // mounted routers
 app.use('/', indexRouter)
-app.use('/users', flightsRouter)
+app.use('/flights', flightsRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

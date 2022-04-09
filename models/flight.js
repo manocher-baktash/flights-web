@@ -7,10 +7,10 @@ const Schema = mongoose.Schema;
 
 //flight schema
 const flightSchema = new Schema({
-  route: {type:String, required:true},
+  route: {type:String},
+  flightNum:{type:Number},
   airline: { type: String, enum:['Kamair','Ariana','Bakhtar','Turkish']},
   airport: {type: String, enum:['KBL','HRT','BLK','DBX'], default: "KBL"},
-  flightNo: {type: Number, required:true, min:10,max:9999},
   departs: {
     type: Date,
   },

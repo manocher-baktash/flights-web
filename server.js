@@ -4,6 +4,7 @@ import express from 'express'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import logger from 'morgan'
+import methodOverride from "method-override";
 
 // Connect to the database with Mongoose
 import("./config/database.js");
@@ -20,6 +21,7 @@ app.set(
   path.join(path.dirname(fileURLToPath(import.meta.url)), 'views')
 )
 app.set('view engine', 'ejs')
+app.use(methodOverride('_method'))
 
 // middleware
 app.use(logger('dev'))

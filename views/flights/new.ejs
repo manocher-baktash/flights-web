@@ -7,8 +7,19 @@
   <form id="new-form" action="/flights" method="POST">
     <label for="route-input">Route:</label>
     <input type="text" name="route" id="route-input">
-    <label for="flightNO-input">Flight No:</label>
-    <input type="number" name="flightNO" id="flightNO-input">
+
+
+    <label for="flightNum-input">Flight Num:</label>
+    <input type="number" name="flightNum" id="flightNum-input">
+
+
+    <label for="airline-select">Airline</label>
+    <select name="airline" id="airline-select">
+      <option value="Ariana">Ariana</option>
+      <option value="KamAir">KamAir</option>
+      <option value="Bakhtar">Bakhtar</option>
+      <option value="Turkish">Turkish</option>
+    </select>
 
     <label for="airport-select">Airport</label>
     <select name="airport" id="airport-select">
@@ -18,13 +29,7 @@
       <option value="DBX">DBX</option>
     </select>
 
-    <label for="airline-select">Airline</label>
-    <select name="airline" id="airline-select">
-      <option value="Ariana">Ariana</option>
-      <option value="KamAir">KamAir</option>
-      <option value="Bakhtar">Bakhtar</option>
-      <option value="Turkish">Turkish</option>
-    </select>
+    
     
     <label for="departs-input">Departs</label>
     <input type="datetime-local" name="departs" id="departs-input">

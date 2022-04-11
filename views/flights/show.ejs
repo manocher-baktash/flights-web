@@ -1,25 +1,43 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/movies/show.css" />
+<link rel="stylesheet" href="/css/flights/show.css" />
 <%- include('../partials/nav') %>
 <main>
   <h1><%= title %></h1>
   <section>
-  <div>
-      <a href="/flights/<%= flight._id %>/edit">
-        <button>Edit Flight</button>
-      </a>
-    </div>
-    <div> Flight route</div>
-    <div><%= flight.route %></div>
-    <div> flight Num</div>
-    <div><%= flight.flightNum %></div>
-    <div> The Airline</div>
-    <div><%= flight.airline %></div>
-    <div> Airport</div>
-    <div><%= flight.airport %></div>
-    <div>Departure</div>
-    <div><%= flight.departs %></div>
+
     
+
+
+
+      <table id="list" class="fl-table">
+        <thead>
+          <tr>
+            <th>route</th>
+            <th>Flight Num</th>
+            <th>Airline</th>
+            <th>Airport</th>
+            <th>Departs</th>
+            <th>Edit</th>
+           
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td><%= flight.route %></td>
+            <td><%= flight.flightNum %></td>
+            <td><%= flight.airline %></td>
+            <td><%= flight.airport %></td>
+            <td><%= flight.departs %></td>
+            <td>   <a href="/flights/<%= flight._id %>/edit">
+              <button>Edit</button>
+            </a> </td>
+      
+          </tr>
+        </tbody>
+      </table>
+
+   
   
   </section>
 </main>

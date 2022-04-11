@@ -1,10 +1,38 @@
+
 <%- include('./partials/html-head') %>
 <%- include('./partials/nav') %>
-<link rel="stylesheet" href="../public/sylesheets/style.css">
+<link rel="stylesheet" href="/css/style.css" />
+
 <main>
   <h1><%= title %></h1>
-  <a href="/flights/new">Add a Flight!</a>
-  <a href="/flights">Show me all the Flights!</a>
+
+  <div class="container">
+    <div class="card">
+      <div class="box">
+        <div class="content">
+          <h2>Flights</h2>
+          <h3>Our Flights</h3>
+          <p>By clicking button below you can see all of our flights.</p>
+          <a href="/flights">Show me all the Flights!</a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="box">
+        <div class="content">
+          <h2>Flights</h2>
+          <h3>Add Flights</h3>
+          <p>you can add a flight by clicking below button</p>
+          <a href="/flights/new">Add a Flight!</a>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
 </main>
 
 <%- include("./partials/footer") %>

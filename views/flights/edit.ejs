@@ -1,42 +1,46 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/movies/edit.css" />
+<link rel="stylesheet" href="/css/flights/edit.css" />
 <%- include('../partials/nav') %>
 
-<main>
-  <h1><%= title %></h1>
-  <form id="new-form" action="/flights/<%= flight._id %>?_method=PUT" method="POST">
-    <label for="route-input">Route:</label>
-    <input type="text" name="route" id="route-input"   value="<%= flight.route %>">
 
 
-    <label for="flightNum-input">Flight Num:</label>
-    <input type="number" name="flightNum" id="flightNum-input"   value="<%= flight.flightNum %>">
-
-
-    <label for="airline-select">Airline</label>
-    <select name="airline" id="airline-select">
-      <option   value="<%= flight.airline %>"><%= flight.airline %></option>
-      <option value="Ariana">Ariana</option>
-      <option value="KamAir">KamAir</option>
-      <option value="Bakhtar">Bakhtar</option>
-      <option value="Turkish">Turkish</option>
-    </select>
-
-    <label for="airport-select">Airport</label>
-    <option   value="<%= flight.airport %>"><%= flight.airport %></option>
-    <select name="airport" id="airport-select">
-      <option value="KBL">KBL</option>
-      <option value="HRT">HRT</option>
-      <option value="BLK">BLK</option>
-      <option value="DBX">DBX</option>
-    </select>
-
-    
-    
-    <label for="departs-input">Departs</label>
-    <input type="datetime-local" name="departs" id="departs-input" value="<%= flight.departs %> ">
-    <button type="submit">Save Flight</button>
-  </form>
-</main>
+  <main>
+   
+    <form id="new-form" action="/flights/<%= flight._id %>?_method=PUT" method="POST">
+      <h1><%= title %></h1>
+      <label for="route-input">Route:</label>
+      <input type="text" name="route" id="route-input"   value="<%= flight.route %>">
+  
+  
+      <label for="flightNum-input">Flight Num:</label>
+      <input type="number" name="flightNum" id="flightNum-input"   value="<%= flight.flightNum %>">
+  
+  
+      <label for="airline-select">Airline</label>
+      <select name="airline" id="airline-select">
+        <option   value="<%= flight.airline %>"><%= flight.airline %></option>
+        <option value="Ariana">Ariana</option>
+        <option value="KamAir">KamAir</option>
+        <option value="Bakhtar">Bakhtar</option>
+        <option value="Turkish">Turkish</option>
+      </select>
+  
+      <label for="airport-select">Airport</label>
+      <option   value="<%= flight.airport %>"><%= flight.airport %></option>
+      <select name="airport" id="airport-select">
+        <option value="KBL">KBL</option>
+        <option value="HRT">HRT</option>
+        <option value="BLK">BLK</option>
+        <option value="DBX">DBX</option>
+      </select>
+  
+      
+      
+      <label for="departs-input">Departs</label>
+      <input type="datetime-local" name="departs" id="departs-input" value="<%= flight.departs %> ">
+      <button type="submit">Save Flight</button>
+    </form>
+  </main>
+  
 
 <%- include("../partials/footer") %>

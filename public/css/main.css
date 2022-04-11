@@ -20,10 +20,10 @@ html {
 }
 
 body {
-  background-color: gray;
+
   /* Use a system font, if none are available use an available sans-sarif font */
   margin: 0;
-  color: #424748;
+  color: #82acb4;
   min-height: 100vh;
   display: grid;
   grid-template-rows: 50px 1fr;
@@ -38,7 +38,6 @@ body > main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #e8eceb;
   padding: 20px;
 }
 
@@ -48,7 +47,7 @@ body > main h1:first-child {
 
 body > nav {
   grid-area: nav;
-  background-color: #b8c0c2;
+  background-color:transparent;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -56,7 +55,12 @@ body > nav {
 }
 
 nav > i {
-  width: 34px;
+  background-image:url(/Images/travelling.png);
+  background-position: center;
+  background-size:cover;
+  background-clip: content-box;
+  width: 100px;
+  height: 80px;
   object-fit: contain;
   margin-right: auto;
 }
@@ -66,16 +70,15 @@ nav > a {
   text-decoration: none;
   padding: 10px;
   border-radius: 5px;
-  color: #424748;
+  color: #424748 !important;
 }
 
 nav > a:visited {
-  color: #424748;
+  color: #76d7eb;
 }
 
 nav > a:hover {
-  color: white;
-  background-color: #424748;
+  color: rgb(255, 0, 0) !important;
 }
 
 nav > a.active {

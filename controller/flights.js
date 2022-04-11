@@ -65,7 +65,7 @@ function edit(req, res) {
     res.render('flights/edit', {
       flight,
       err,
-      title: "Edit Movie"
+      title: "Edit Flight"
     })
   })
 };

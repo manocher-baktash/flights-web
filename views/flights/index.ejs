@@ -1,10 +1,10 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/movies/index.css" />
+<link rel="stylesheet" href="/css/flights/index.css" />
 <%- include('../partials/nav') %>
 
 <main>
   <h1><%= title %> </h1>
-  <table id="list">
+  <table id="list" class="fl-table">
     <thead>
       <tr>
         <th>route</th>
@@ -12,8 +12,8 @@
         <th>Airline</th>
         <th>Airport</th>
         <th>Departs</th>
-        <th></th>
-        <th></th>
+        <th>Details</th>
+        <th>Delete</th>
       </tr>
     </thead>
     <tbody>
